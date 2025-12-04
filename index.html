@@ -1,11 +1,13 @@
-<!DOCTYPE html>
+Thik hai bhai, ab ek hi final FULL combined HTML page de raha <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Games Planet • PS2 FMCB / FunTuna USB & Combo Packs</title>
-<meta name="description" content="PS2 FMCB / FunTuna memory card, USB-only game drives, and FMCB+USB combo packs for PlayStation 2 Fat & Slim. One-tap WhatsApp prefill with Top & Optional game packs."/>
-<meta name="keywords" content="PS2,FMCB,FunTuna,Free McBoot,PS2 USB,PS2 USB Games,PS2 USB Pack India,OPL PS2,PS2 USB 64GB,PS2 USB 128GB,PS2 USB 256GB,PS2 USB 500GB,GamesPlanet,PS2 Memory Card FMCB,PS2 FunTuna 9xxxx,PS2 Combo Pack"/>
+<title>PS2 FMCB & FunTuna USB Game Packs | GamesPlanet</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description"
+      content="PS2 FMCB / FunTuna USB game packs 64GB–500GB with huge pre-installed OPL collection. Works on PS2 Slim & Fat. Plug & Play USB gaming in India. Quick model-wise FMCB card, USB-only and FMCB+USB combo for PS2." />
+<meta name="keywords"
+      content="PS2,FMCB,FunTuna,Free McBoot,PS2 USB,PS2 USB Games,PS2 USB Pack India,OPL PS2,PS2 USB 64GB,PS2 USB 128GB,PS2 USB 256GB,PS2 USB 500GB,GamesPlanet,PS2 Memory Card FMCB,PS2 FMCB USB Pack,PS2 FunTuna USB Games,PS2 Slim USB,PS2 Fat FMCB Setup" />
 
 <style>
 :root{
@@ -73,7 +75,7 @@ body{
 .wrap{
   max-width:var(--max-width);
   margin:0 auto;
-  padding:24px 16px 56px;
+  padding:24px 16px 80px;
 }
 
 /* Brand / top bar */
@@ -189,23 +191,49 @@ h1 span{
   margin:8px 0 18px;
 }
 
-/* MINI HERO (text under controls) */
-.hero-strip{
-  margin-bottom:18px;
-  padding:10px 12px 12px;
-  border-radius:18px;
-  background:
-    radial-gradient(circle at 0 0,rgba(34,197,94,0.14),transparent 55%),
-    radial-gradient(circle at 100% 100%,rgba(56,189,248,0.14),transparent 60%),
-    rgba(15,23,42,0.98);
-  border:1px solid rgba(31,41,55,0.95);
-  box-shadow:0 16px 34px rgba(15,23,42,0.95);
+/* HERO (from first page, adapted) */
+.hero{
+  display:grid;
+  grid-template-columns:minmax(0,3fr) minmax(0,2.6fr);
+  gap:24px;
+  align-items:center;
+  margin-bottom:26px;
+}
+
+.hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:0.45rem;
+  padding:0.2rem 0.6rem 0.2rem 0.25rem;
+  border-radius:var(--radius-pill);
+  background: radial-gradient(circle at top left,rgba(34,197,94,0.24),rgba(15,23,42,0.94));
+  border:1px solid rgba(34,197,94,0.35);
+  margin-bottom:0.9rem;
+}
+
+.hero-badge-pill{
+  padding:0.18rem 0.55rem;
+  border-radius:var(--radius-pill);
+  background:rgba(15,23,42,0.9);
+  border:1px solid rgba(55,65,81,0.9);
+  font-size:0.65rem;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  color:var(--muted);
+}
+
+.hero-badge-text{
+  font-size:0.75rem;
+  color:var(--accent);
+  font-weight:500;
 }
 
 .hero-title{
-  font-size:1.05rem;
-  font-weight:700;
-  margin:0 0 4px;
+  font-size:clamp(2.1rem,4vw,2.6rem);
+  font-weight:800;
+  letter-spacing:0.02em;
+  line-height:1.1;
+  margin:0 0 0.7rem;
 }
 
 .hero-title span{
@@ -215,29 +243,213 @@ h1 span{
 }
 
 .hero-sub{
-  margin:0 0 8px;
-  font-size:0.86rem;
+  font-size:0.96rem;
   color:var(--muted);
+  max-width:29rem;
+  line-height:1.6;
+  margin-bottom:1.1rem;
 }
 
-.hero-chips{
+.hero-highlights{
   display:flex;
   flex-wrap:wrap;
-  gap:6px;
+  gap:0.6rem;
+  margin-bottom:1.1rem;
 }
 
 .hero-chip{
-  font-size:0.72rem;
-  padding:3px 8px;
+  font-size:0.73rem;
+  padding:0.25rem 0.7rem;
   border-radius:var(--radius-pill);
-  border:1px solid rgba(148,163,184,0.7);
   background:rgba(15,23,42,0.95);
+  border:1px solid rgba(55,65,81,0.9);
+  color:var(--muted);
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.75rem;
+  align-items:center;
+  margin-bottom:0.85rem;
+}
+
+.btn-main{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:0.45rem;
+  padding:0.75rem 1.4rem;
+  border-radius:var(--radius-pill);
+  font-size:0.9rem;
+  font-weight:600;
+  border:none;
+  cursor:pointer;
+  transition:transform var(--transition-fast),
+           box-shadow var(--transition-fast),
+           background var(--transition-fast),
+           color var(--transition-fast),
+           border-color var(--transition-fast);
+  white-space:nowrap;
+}
+
+.btn-main-primary{
+  background:linear-gradient(135deg,var(--accent),var(--accent-alt));
+  color:#022c22;
+  box-shadow:0 18px 40px rgba(34,197,94,0.55);
+}
+
+.btn-main-primary:hover{
+  transform:translateY(-1px);
+  box-shadow:0 21px 46px rgba(34,197,94,0.7);
+}
+
+.btn-main-ghost{
+  background:rgba(15,23,42,0.6);
+  border:1px solid rgba(75,85,99,0.95);
+  color:var(--muted);
+}
+
+.btn-main-ghost:hover{
+  background:rgba(15,23,42,0.95);
+  border-color:rgba(148,163,184,0.85);
+  color:#e5e7eb;
+  transform:translateY(-1px);
+}
+
+.hero-footnote{
+  font-size:0.75rem;
+  color:var(--muted);
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+  align-items:center;
+}
+
+.hero-footnote-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:0.4rem;
+}
+
+.hero-footnote-dot{
+  width:8px;
+  height:8px;
+  border-radius:999px;
+  background-color:var(--accent);
+  box-shadow:0 0 0 4px rgba(34,197,94,0.25);
+}
+
+.hero-visual-wrap{
+  position:relative;
+}
+
+.hero-card{
+  background:radial-gradient(circle at top left,#1f2937,#020617);
+  border-radius:24px;
+  padding:1.4rem 1.3rem;
+  box-shadow:var(--shadow-soft);
+  border:1px solid rgba(55,65,81,0.9);
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-glow{
+  position:absolute;
+  inset:-30%;
+  background:
+    radial-gradient(circle at 20% 0,rgba(34,197,94,0.25),transparent 55%),
+    radial-gradient(circle at 80% 0,rgba(56,189,248,0.22),transparent 55%);
+  mix-blend-mode:screen;
+  opacity:0.7;
+  pointer-events:none;
+}
+
+.hero-card-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:0.6rem;
+}
+
+.hero-card-title{
+  font-size:0.95rem;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  gap:0.4rem;
+}
+
+.hero-card-label{
+  font-size:0.7rem;
+  padding:0.12rem 0.5rem;
+  border-radius:var(--radius-pill);
+  background:rgba(15,23,42,0.9);
+  border:1px solid rgba(55,65,81,0.9);
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+}
+
+.hero-card-row{
+  display:flex;
+  justify-content:space-between;
+  gap:0.9rem;
+  margin-bottom:0.9rem;
+  align-items:center;
+}
+
+.hero-card-spec{
+  font-size:0.78rem;
+  color:var(--muted);
+}
+
+.hero-price-tag{
+  text-align:right;
+  font-size:0.8rem;
+}
+
+.hero-price-main{
+  font-size:1.1rem;
+  font-weight:700;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:0.6rem;
+}
+
+.hero-grid-card{
+  border-radius:14px;
+  padding:0.75rem 0.85rem;
+  background:rgba(15,23,42,0.98);
+  border:1px solid rgba(55,65,81,0.9);
+  font-size:0.75rem;
+}
+
+.hero-grid-label{
+  font-size:0.7rem;
+  color:var(--muted);
+  margin-bottom:0.2rem;
+}
+
+.hero-grid-value{
+  font-size:0.88rem;
+  font-weight:600;
+}
+
+.hero-card-footer{
+  margin-top:0.8rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:0.7rem;
   color:var(--muted);
 }
 
 /* MODEL SELECTOR */
 .model-selector{
-  margin-top:16px;
   margin-bottom:18px;
   padding:14px 14px 16px;
   border-radius:18px;
@@ -567,82 +779,129 @@ h1 span{
   gap:6px;
 }
 
-/* EXTRA: info cards + SEO tags (from old page) */
-.info-grid{
-  margin-top:18px;
+/* Accessories + SEO cards from first page */
+.section-alt{
+  margin-top:0.4rem;
   display:grid;
+  gap:0.9rem;
   grid-template-columns:minmax(0,3.5fr) minmax(0,2.2fr);
-  gap:16px;
+  align-items:start;
 }
 
-.infocard{
-  border-radius:18px;
-  background:
-    radial-gradient(circle at 0 0,#020617,#020617);
-  padding:12px 14px 12px;
-  border:1px solid rgba(31,41,55,0.95);
-  box-shadow:var(--shadow-soft);
-  font-size:0.82rem;
-  color:var(--muted);
-}
-
-.infocard-title{
+.card-title{
   font-size:0.9rem;
   font-weight:600;
-  margin-bottom:4px;
+  margin-bottom:0.4rem;
   color:var(--text);
 }
 
-.infocard-list{
+.card-list{
   list-style:none;
   padding:0;
-  margin:4px 0 0;
+  margin:0.15rem 0 0;
 }
 
-.infocard-list li{
+.card-list li{
   display:flex;
-  gap:8px;
-  margin-bottom:4px;
+  gap:0.5rem;
+  margin-bottom:0.35rem;
+  align-items:flex-start;
 }
 
-.infocard-bullet{
+.card-bullet{
   width:7px;
   height:7px;
   border-radius:999px;
   background-color:var(--accent);
-  margin-top:4px;
+  margin-top:0.18rem;
   flex-shrink:0;
 }
 
-.infocard-note{
-  font-size:0.76rem;
-  margin-top:8px;
+.card-note{
+  font-size:0.72rem;
+  color:var(--muted);
+  margin-top:0.55rem;
 }
 
 .seo-tags{
   display:flex;
   flex-wrap:wrap;
-  gap:6px;
-  margin-top:4px;
+  gap:0.35rem;
+  margin-top:0.4rem;
 }
 
 .seo-tag{
-  font-size:0.7rem;
-  padding:3px 8px;
+  font-size:0.68rem;
+  padding:0.18rem 0.55rem;
   border-radius:var(--radius-pill);
-  border:1px dashed rgba(55,65,81,0.9);
-  background:rgba(15,23,42,0.7);
+  border:1px dashed rgba(55,65,81,0.85);
   color:var(--muted);
+  background:rgba(15,23,42,0.7);
   white-space:nowrap;
 }
 
+/* Footer from first page */
+.footer{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0.8rem 0 1.7rem;
+  font-size:0.72rem;
+  color:var(--muted);
+  display:flex;
+  justify-content:space-between;
+  gap:0.8rem;
+  border-top:1px solid rgba(15,23,42,0.95);
+  margin-top:1.8rem;
+}
+
+/* WhatsApp floating button */
+.wa-floating{
+  position:fixed;
+  right:1.1rem;
+  bottom:1rem;
+  z-index:30;
+}
+
+.wa-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:0.45rem;
+  padding:0.7rem 1.1rem;
+  border-radius:999px;
+  background:linear-gradient(135deg,#22c55e,#16a34a);
+  color:#022c22;
+  font-weight:700;
+  font-size:0.85rem;
+  box-shadow:0 18px 40px rgba(22,163,74,0.7);
+  border:none;
+  cursor:pointer;
+  transition:transform var(--transition-fast),
+             box-shadow var(--transition-fast);
+}
+
+.wa-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 22px 50px rgba(22,163,74,0.9);
+}
+
+.wa-icon{
+  font-size:1.1rem;
+}
+
 /* Responsive */
+@media(max-width:980px){
+  .hero{
+    grid-template-columns:1fr;
+  }
+  .hero-visual-wrap{
+    order:-1;
+  }
+}
+
 @media(max-width:900px){
   .row{
     grid-template-columns: minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);
-  }
-  .info-grid{
-    grid-template-columns:1fr;
   }
 }
 
@@ -655,6 +914,10 @@ h1 span{
   .brand-actions{
     width:100%;
     justify-content:flex-start;
+  }
+
+  .footer{
+    flex-direction:column;
   }
 }
 
@@ -679,19 +942,24 @@ h1 span{
   .card-images img{
     max-width:95px;
   }
+
+  .hero{
+    gap:1.6rem;
+  }
 }
 </style>
 </head>
 <body>
+
 <div class="wrap">
 
-  <!-- BRAND / HERO BAR -->
+  <!-- BRAND / TOP BAR -->
   <header class="brand">
     <div class="brand-left">
       <div class="logo">GP</div>
       <div>
-        <h1>PS2 Quick Buy — <span>FMCB / FunTuna USB & Combo</span></h1>
-        <div class="sub">PS2 Slim &amp; Fat • One-tap WhatsApp Prefill • Top &amp; Optional Game Packs</div>
+        <h1>PS2 FMCB / <span>FunTuna USB Packs</span></h1>
+        <div class="sub">Model-wise FMCB Card • USB Only • Combo Packs • One-tap WhatsApp Order</div>
       </div>
     </div>
     <div class="brand-actions">
@@ -705,31 +973,116 @@ h1 span{
     </div>
   </header>
 
+  <!-- HERO (from first design) -->
+  <section class="hero">
+    <div>
+      <div class="hero-badge">
+        <div class="hero-badge-pill">PS2 FMCB • FUNTUNA • USB</div>
+        <div class="hero-badge-text">India Ready – Slim &amp; Fat Compatible</div>
+      </div>
+
+      <h2 class="hero-title">
+        PS2 <span>FMCB / FunTuna</span> USB Game Packs<br />
+        64GB – 500GB OPL Collection
+      </h2>
+
+      <p class="hero-sub">
+        Plug &amp; Play PS2 gaming – बिना modchip, बिना tension. Slim और Fat
+        दोनों PS2 पर USB से सीधे OPL में games चलाओ. Pre-installed OPL
+        collection, India-friendly support &amp; WhatsApp ordering.
+      </p>
+
+      <div class="hero-highlights">
+        <div class="hero-chip">✅ No Modding Needed</div>
+        <div class="hero-chip">🎮 Pre-installed Top Games</div>
+        <div class="hero-chip">💾 64GB • 128GB • 256GB • 500GB</div>
+        <div class="hero-chip">🟢 FMCB &amp; FunTuna Compatible</div>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn-main btn-main-primary"
+           href="https://wa.me/917983624797?text=Hi%2C%20I%20want%20to%20buy%20FMCB%20USB%20Combo%20for%20PS2">
+          <span>🛒</span>
+          Order FMCB + USB Combo
+        </a>
+        <a class="btn-main btn-main-ghost" href="#cardsAnchor">
+          View Model-wise Packs
+        </a>
+      </div>
+
+      <div class="hero-footnote">
+        <div class="hero-footnote-pill">
+          <span class="hero-footnote-dot"></span>
+          <span><strong>Works on:</strong> PS2 Slim (7xxxx–9xxxx) &amp; Fat</span>
+        </div>
+        <div>OPL Ready • Hindi support content • India-friendly help</div>
+      </div>
+    </div>
+
+    <div class="hero-visual-wrap">
+      <div class="hero-card">
+        <div class="hero-glow"></div>
+        <div class="hero-card-header">
+          <div class="hero-card-title">⚡ PS2 FMCB &amp; USB Snapshot</div>
+          <div class="hero-card-label">Quick View</div>
+        </div>
+
+        <div class="hero-card-row">
+          <div class="hero-card-spec">
+            USB ko PS2 me lagao → OPL open karo → Direct game list ready.<br />
+            No risky modchip. Just pure plug &amp; play.
+          </div>
+          <div class="hero-price-tag">
+            <span>Storage Range</span>
+            <span class="hero-price-main">64GB ➜ 500GB</span>
+          </div>
+        </div>
+
+        <div class="hero-card-row">
+          <div class="hero-pill-stack">
+            <div class="hero-chip">FMCB Memory Card</div>
+            <div class="hero-chip">FunTuna Slim 9xxxx</div>
+            <div class="hero-chip">USB Game Drive</div>
+          </div>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-grid-card">
+            <div class="hero-grid-label">Game Source</div>
+            <div class="hero-grid-value">Pre-tested OPL ISOs</div>
+          </div>
+          <div class="hero-grid-card">
+            <div class="hero-grid-label">Setup Time</div>
+            <div class="hero-grid-value">&lt; 2 minutes</div>
+          </div>
+          <div class="hero-grid-card">
+            <div class="hero-grid-label">Models</div>
+            <div class="hero-grid-value">PS2 Slim &amp; Fat</div>
+          </div>
+          <div class="hero-grid-card">
+            <div class="hero-grid-label">Style</div>
+            <div class="hero-grid-value">Plug &amp; Play USB</div>
+          </div>
+        </div>
+
+        <div class="hero-card-footer">
+          <span>💡 Ideal for: Retro lovers, café setup, collectors</span>
+          <span>Made for India • GamesPlanet</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Top navigation shortcuts -->
   <div class="controls">
     <a class="linkbtn" href="https://gamesplanet13.github.io/ps2gameselector/" target="_blank" rel="noopener">🟨 Optional Games Selector</a>
     <a class="linkbtn" href="https://youtu.be/bpGm0IAeyek" target="_blank" rel="noopener">▶️ Setup Video</a>
   </div>
 
-  <!-- Mini hero (from first page tone) -->
-  <section class="hero-strip">
-    <h2 class="hero-title">PS2 <span>FMCB / FunTuna USB Game Packs</span> — 64GB से 500GB तक</h2>
-    <p class="hero-sub">
-      Plug &amp; Play PS2 gaming – बिना modchip, बिना tension. Slim और Fat दोनों PS2 पर USB से सीधे OPL में games चलाओ.
-      Pre-installed collection, India-friendly setup video ke साथ.
-    </p>
-    <div class="hero-chips">
-      <div class="hero-chip">✅ No Modding Needed</div>
-      <div class="hero-chip">🎮 Pre-installed Top Games</div>
-      <div class="hero-chip">💾 64GB • 128GB • 256GB • 500GB</div>
-      <div class="hero-chip">🟢 FMCB &amp; FunTuna Supported</div>
-    </div>
-  </section>
-
   <!-- MODEL SELECTOR -->
   <section class="model-selector">
     <h2 class="model-title">Step 1 — Select Your PS2 Model</h2>
-    <p class="model-sub">✔️ जैसे ही आप अपना PS2 मॉडल चुनेंगे, नीचे सिर्फ उसी मॉडल के FMCB कार्ड, USB पैक और Combo Packs दिखाई देंगे।</p>
+    <p class="model-sub">✔️ जैसे ही आप अपना PS2 मॉडल चुनेंगे, नीचे सिर्फ उसी मॉडल के FMCB कार्ड USB और Combo Packs दिखाई देंगे।</p>
     <div class="model-btn-row">
       <button type="button" class="model-btn" data-model="fat" onclick="selectModel('fat')">
         <span>🔵</span> PS2 FAT
@@ -752,9 +1105,10 @@ h1 span{
   <!-- Anchor to scroll after selection -->
   <div id="cardsAnchor"></div>
 
+  <!-- MAIN GRID: FMCB / USB / COMBO -->
   <div class="grid">
 
-    <!-- 1) FMCB (hidden until model select) -->
+    <!-- 1) FMCB -->
     <section class="card model-guard hidden" aria-labelledby="fmcb-title">
       <span class="badge">FMCB / FunTuna Card</span>
       <h2 class="title" id="fmcb-title">Memory Card for PS2 (Model-wise)</h2>
@@ -798,7 +1152,7 @@ h1 span{
       </div>
     </section>
 
-    <!-- 2) USB ONLY (same for all models, just hidden before select) -->
+    <!-- 2) USB ONLY -->
     <section class="card model-guard hidden" aria-labelledby="usb-title">
       <span class="badge">USB Only</span>
       <h2 class="title" id="usb-title">USB for PlayStation 2 — Game-Loaded</h2>
@@ -898,43 +1252,45 @@ h1 span{
     </ul>
   </div>
 
-  <!-- Accessories + SEO (from old page) -->
-  <div class="section">
-    <div class="info-grid">
-      <div class="infocard">
-        <div class="infocard-title">PS2 Memory Card (FMCB / FunTuna Ready)</div>
+  <!-- ACCESSORIES + SEO (from first page) -->
+  <section class="section">
+    <div class="section-alt">
+      <div class="card">
+        <div class="card-title">PS2 Memory Card (FMCB / FunTuna)</div>
         <p>
-          Agar aapke पास sirf PS2 console hai aur memory card nahi, to ye ready-made FMCB card best option hai.
-          PS2 me daalo, power on karo, OPL &amp; menus direct load ho jayenge.
+          Agar aapke paas sirf PS2 console hai aur memory card nahi,
+          to ye ready-made FMCB card best option hai. PS2 me daalo,
+          power on karo, OPL &amp; menus direct load ho jayenge.
         </p>
-        <ul class="infocard-list">
+        <ul class="card-list">
           <li>
-            <div class="infocard-bullet"></div>
-            <div>8MB memory card with FMCB pre-installed (model ke हिसाब se setup).</div>
+            <div class="card-bullet"></div>
+            <div>8MB official-size memory card with FMCB pre-installed.</div>
           </li>
           <li>
-            <div class="infocard-bullet"></div>
-            <div>PS2 Slim &amp; Fat supported (FMCB / FunTuna combo ke साथ).</div>
+            <div class="card-bullet"></div>
+            <div>PS2 Slim &amp; Fat supported (model dependent).</div>
           </li>
           <li>
-            <div class="infocard-bullet"></div>
-            <div>USB packs ke साथ plug &amp; play gaming – बस OPL open karo aur खेलो.</div>
+            <div class="card-bullet"></div>
+            <div>USB packs ke साथ plug &amp; play experience.</div>
           </li>
         </ul>
-        <p class="infocard-note">
-          💾 Recommended combo: 1× FMCB / FunTuna Card + 1× USB Pack (64GB–500GB) – ek baar setup, baar-baar masti.
+        <p class="card-note">
+          💾 Recommended combo: 1× FMCB Card + 1× USB Pack (64GB–500GB)
+          – ek baar setup, baar-baar masti.
         </p>
-        <p style="margin-top:6px;">
+        <p style="margin-top: 0.6rem;">
           🔗
-          <a href="https://gamesplanet.shop/products/ps2-memory-card-8mb-with-fmcb-pre-installed" target="_blank" rel="noopener">
+          <a href="https://gamesplanet.shop/products/ps2-memory-card-8mb-with-fmcb-pre-installed">
             Buy PS2 Memory Card 8MB (FMCB)
           </a>
         </p>
       </div>
 
-      <div class="infocard">
-        <div class="infocard-title">SEO Keywords, Tags &amp; Hashtags</div>
-        <p>Google / YouTube / page ke liye smart PS2 FMCB + USB keywords:</p>
+      <div class="card">
+        <div class="card-title">SEO Keywords, Tags &amp; Hashtags (Page Boost)</div>
+        <p>Google / YouTube ke liye smart keywords:</p>
         <div class="seo-tags">
           <span class="seo-tag">PS2 FMCB USB Pack</span>
           <span class="seo-tag">PS2 FunTuna USB Games</span>
@@ -951,21 +1307,33 @@ h1 span{
           <span class="seo-tag">PS2 Memory Card FMCB</span>
           <span class="seo-tag">FunTuna PS2 Slim 9xxxx</span>
         </div>
-        <p class="infocard-note">
-          #PS2 #FMCB #FunTuna #FreeMcBoot #PS2USBGames #OPLPS2 #PS2India #RetroGaming #PS2Collection
+        <p class="card-note">
+          #PS2 #FMCB #FunTuna #FreeMcBoot #PS2USBGames #OPLPS2
+          #PS2India #RetroGaming #PS2Collection
         </p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <p class="foot">
-    © Games Planet — WhatsApp: +91 79836 24797 • Prices in INR.
-  </p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>© <span id="year">2025</span> GamesPlanet • PS2 FMCB &amp; FunTuna USB Packs</div>
+    <div>Support via WhatsApp • Made for Indian PS2 gamers</div>
+  </footer>
+
+</div>
+
+<!-- WhatsApp Floating Button -->
+<div class="wa-floating">
+  <a class="wa-btn"
+     href="https://wa.me/917983624797?text=Hi%2C%20I%20want%20to%20buy%20FMCB%20USB%20Combo%20for%20PS2">
+    <span class="wa-icon">💬</span>
+    Chat &amp; Order on WhatsApp
+  </a>
 </div>
 
 <script>
 // ===== Updated Product Data =====
-
 const usbVariants = [
   { v:'64GB PD', top:1099, opt:1199, count:21 },
   { v:'128GB PD', top:1699, opt:1849, count:41 },
@@ -996,11 +1364,12 @@ function goPrefill(product, variant, base, pack, allowCod){
 
 // ===== USB renderer =====
 (function renderUSB(){
-  const box=document.getElementById('usbList'); 
+  const box=document.getElementById('usbList');
+  if(!box) return;
   box.innerHTML='';
 
   usbVariants.forEach(({v,top,opt,count})=>{
-    const row=document.createElement('div'); 
+    const row=document.createElement('div');
     row.className='row';
 
     row.innerHTML=`
@@ -1021,12 +1390,13 @@ function goPrefill(product, variant, base, pack, allowCod){
   const fatBox = document.getElementById('comboFatList');
   const slim7Box = document.getElementById('comboSlim7List');
   const slim9Box = document.getElementById('comboSlim9List');
+  if(!fatBox || !slim7Box || !slim9Box) return;
   fatBox.innerHTML=''; slim7Box.innerHTML=''; slim9Box.innerHTML='';
 
   comboVariants.forEach(({v,top,opt,count})=>{
 
     // FAT
-    const rowF=document.createElement('div'); 
+    const rowF=document.createElement('div');
     rowF.className='row';
     rowF.innerHTML=`
       <div class="name">${v} <span class="pill">🎮 Top ${count}</span></div>
@@ -1037,7 +1407,7 @@ function goPrefill(product, variant, base, pack, allowCod){
     fatBox.appendChild(rowF);
 
     // Slim 7xxxx
-    const row7=document.createElement('div'); 
+    const row7=document.createElement('div');
     row7.className='row';
     row7.innerHTML=`
       <div class="name">${v} <span class="pill">🎮 Top ${count}</span></div>
@@ -1048,7 +1418,7 @@ function goPrefill(product, variant, base, pack, allowCod){
     slim7Box.appendChild(row7);
 
     // Slim 9xxxx
-    const row9=document.createElement('div'); 
+    const row9=document.createElement('div');
     row9.className='row';
     row9.innerHTML=`
       <div class="name">${v} <span class="pill">🎮 Top ${count}</span></div>
@@ -1117,7 +1487,9 @@ function clearModel(){
   const wrap = document.getElementById('selectedModelWrap');
   if(wrap){ wrap.classList.add('hidden'); }
 }
-</script>
 
+// Set year automatically
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
